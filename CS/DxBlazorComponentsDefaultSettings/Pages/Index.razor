@@ -10,14 +10,14 @@
     <DxDataGridColumn Field="@nameof(WeatherForecast.TemperatureC)" Caption="@("Temp. (\x2103)")" TextAlignment="@DataGridTextAlign.Right"></DxDataGridColumn>
     <DxDataGridSpinEditColumn Field="@nameof(WeatherForecast.TemperatureF)" Caption="@("Temp. (\x2109)")"></DxDataGridSpinEditColumn>
     <DxDataGridColumn Field="@nameof(WeatherForecast.Summary)" Caption="Summary"></DxDataGridColumn>
-    <DxDataGridDateEditColumn Field="@nameof(WeatherForecast.Date)" DisplayFormatString="D" EditFormatString="d"></DxDataGridDateEditColumn>
+    <DxDataGridDateEditColumn Field="@nameof(WeatherForecast.Date)" DisplayFormat="D" EditorFormat="d"></DxDataGridDateEditColumn>
 </MyDataGrid>
 <div>Default Data Grid:</div>
 <DxDataGrid Data="forecasts">
     <DxDataGridColumn Field="@nameof(WeatherForecast.TemperatureC)" Caption="@("Temp. (\x2103)")" TextAlignment="@DataGridTextAlign.Right"></DxDataGridColumn>
     <DxDataGridSpinEditColumn Field="@nameof(WeatherForecast.TemperatureF)" Caption="@("Temp. (\x2109)")"></DxDataGridSpinEditColumn>
     <DxDataGridColumn Field="@nameof(WeatherForecast.Summary)" Caption="Summary"></DxDataGridColumn>
-    <DxDataGridDateEditColumn Field="@nameof(WeatherForecast.Date)" DisplayFormatString="D" EditFormatString="d"></DxDataGridDateEditColumn>
+    <DxDataGridDateEditColumn Field="@nameof(WeatherForecast.Date)" DisplayFormat="D" EditorFormat="d"></DxDataGridDateEditColumn>
 </DxDataGrid>
 @code{
     WeatherForecast[] forecasts;
