@@ -14,7 +14,7 @@ Create a component that inherits from our Blazor control and overrides the **Set
 
 In this example, the [MyDataGrid](./CS/DxBlazorComponentsDefaultSettings/Components/MyDataGrid.cs) component contains the inherited **DxDataGrid** component whose **PageSize**, **ShowFilterRow**, and **ShowGroupPanel** properties contain new default values. You can compare the **MyDataGrid** component with the default **DxDataGrid** component on the [Index](./CS/DxBlazorComponentsDefaultSettings/Pages/Index.razor) page: they have the same settings in the markup.
 
-It's not possible to use This approach is not applicable to the **DxChartXXXSeries** components and specify the **ValueField**, **ArgumentField**, **NameField**, and **PaneField** properties.
+This approach is not applicable to the **DxChartXXXSeries** components and specify the **ValueField**, **ArgumentField**, **NameField**, and **PaneField** properties.
 
 ## Files to Look At
 
