@@ -6,13 +6,16 @@
 
 # DevExpress Blazor Components - Set predefined settings for the specific component
 
-In case of a large web application, controls usually have the same settings on different pages. The recommended Blazor approach is to specify the component settings in the markup. It is possible to override the **SetParametersAsync** method to specify default settings for Blazor components in your application. However, we do not recommend that you use this approach as it is not natural for Blazor applications. We also do not test this approach to specify predefined settings with all our controls, so you can use it with your own risk.
+Controls usually have the same settings for different pages of a large web application, and we recommend that you specify the component settings in markup. You can also override the **SetParametersAsync** method to specify the default settings for Blazor components in your application. However, we do not recommend that you use this approach because it is not a common approach in Blazor. Use it at your own risk.
+
 
 ![Grid with predefined settings and default](images/result.png)
 
-Create a component that inherits from our Blazor control and overrides the **SetParametersAsync** method. In this method, set the necessary default values for the **public** properties before you call the base method. You can initialize properties with custom default values in the markup because the base method is called after your custom settings. We do not recommend that you override and change values of any protected properties.
+Create an inheritor from our Blazor control that overrides the **SetParametersAsync** method. In this method, set the default values for the public properties before you call the base method. You can initialize properties with custom default values in markup because the base method is called after your custom settings. We do not recommend that you override and change the values of protected properties.
 
-In this example, the [MyDataGrid](./CS/DxBlazorComponentsDefaultSettings/Components/MyDataGrid.cs) component contains the inherited **DxDataGrid** component whose **PageSize**, **ShowFilterRow**, and **ShowGroupPanel** properties contain new default values. You can compare the **MyDataGrid** component with the default **DxDataGrid** component on the [Index](./CS/DxBlazorComponentsDefaultSettings/Pages/Index.razor) page: they have the same settings in the markup.
+
+In this example, the [MyDataGrid](./CS/DxBlazorComponentsDefaultSettings/Components/MyDataGrid.cs) component contains the inherited **DxDataGrid** component whose **PageSize**, **ShowFilterRow**, and **ShowGroupPanel** properties contain new default values. You can compare the **MyDataGrid** component with the default **DxDataGrid** component on the [Index](./CS/DxBlazorComponentsDefaultSettings/Pages/Index.razor) page to ensure they have the same settings in markup.
+
 
 You cannot use this approach for **DxChartXXXSeries** components and specify the **ValueField**, **ArgumentField**, **NameField**, and **PaneField** properties.
 
