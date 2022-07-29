@@ -15,3 +15,8 @@ Specify the same **LayoutAutoLoading** [event handler](./CS/GridWithPredefinedSe
 
 * [Index.razor](./CS/GridWithPredefinedSettings/Pages/Index.razor)
 * [GridDefaultParameters.cs](./CS/GridWithPredefinedSettings/Data/GridDefaultParameters.cs)
+
+## Documentation
+
+* [LayoutAutoLoading](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxGrid.LayoutAutoLoading)
+* [GridPersistentLayoutEventArgs](https://docs.devexpress.com/Blazor/DevExpress.Blazor.GridPersistentLayoutEventArgs)
