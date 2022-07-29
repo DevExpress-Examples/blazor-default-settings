@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# DevExpress Blazor Components - Set predefined settings for the specific component
+# DevExpress Blazor Grid - Set predefined common settings for several components
 
 Controls usually have the same settings for different pages of a large web application, and we recommend that you specify the component settings in markup. For our Grid component, you can use the [Save and Restore the Layout](https://demos.devexpress.com/blazor/Grid/Layout) feature to apply common settings for several components.
 
