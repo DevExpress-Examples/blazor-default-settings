@@ -1,0 +1,32 @@
+﻿@page "/"
+@using GridWithPredefinedSettings.Data
+@inject WeatherForecastService ForecastService
+
+<DxGrid Data="@forecastLondon"
+        LayoutAutoLoading="Grid_LayoutAutoLoading">
+    <Columns>
+        <DxGridDataColumn Caption="Date" FieldName="Date" />
+        <DxGridDataColumn Caption="Temperature" FieldName="TemperatureF" />
+    </Columns>
+</DxGrid>
+
+<DxGrid Data="@forecastParis"
+        LayoutAutoLoading="Grid_LayoutAutoLoading">
+    <Columns>
+        <DxGridDataColumn Caption="Date" FieldName="Date" />
+        <DxGridDataColumn Caption="Temperature" FieldName="TemperatureF" />
+    </Columns>
+</DxGrid>
+
+@code {
+    async Task Grid_LayoutAutoLoading(GridPersistentLayoutEventArgs e) {
+        GridDefaultParameters.SetDefaultParameters(e.Grid);
+    }
+
+    private WeatherForecast[]? forecastLondon, forecastParis;
+
+    protected override async Task OnInitializedAsync() {
+        forecastLondon = await ForecastService.GetForecastAsync(DateTime.Now);
+        forecastParis = await ForecastService.GetForecastAsync(DateTime.Now);
+    }
+}
