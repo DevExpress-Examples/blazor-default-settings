@@ -3,22 +3,30 @@
 @using DxBlazorComponentsDefaultSettings.Data
 @inject WeatherForecastService ForecastService
 
-<div>Custom Text Box:</div>
+<h3>Custom Text Box:</h3>
+
 <MyTextBox Text="Test123"></MyTextBox>
-<div>Custom Data Grid:</div>
-<MyDataGrid Data="forecasts">
-    <DxDataGridColumn Field="@nameof(WeatherForecast.TemperatureC)" Caption="@("Temp. (\x2103)")" TextAlignment="@DataGridTextAlign.Right"></DxDataGridColumn>
-    <DxDataGridSpinEditColumn Field="@nameof(WeatherForecast.TemperatureF)" Caption="@("Temp. (\x2109)")"></DxDataGridSpinEditColumn>
-    <DxDataGridColumn Field="@nameof(WeatherForecast.Summary)" Caption="Summary"></DxDataGridColumn>
-    <DxDataGridDateEditColumn Field="@nameof(WeatherForecast.Date)" DisplayFormat="D" EditorFormat="d"></DxDataGridDateEditColumn>
-</MyDataGrid>
-<div>Default Data Grid:</div>
-<DxDataGrid Data="forecasts">
-    <DxDataGridColumn Field="@nameof(WeatherForecast.TemperatureC)" Caption="@("Temp. (\x2103)")" TextAlignment="@DataGridTextAlign.Right"></DxDataGridColumn>
-    <DxDataGridSpinEditColumn Field="@nameof(WeatherForecast.TemperatureF)" Caption="@("Temp. (\x2109)")"></DxDataGridSpinEditColumn>
-    <DxDataGridColumn Field="@nameof(WeatherForecast.Summary)" Caption="Summary"></DxDataGridColumn>
-    <DxDataGridDateEditColumn Field="@nameof(WeatherForecast.Date)" DisplayFormat="D" EditorFormat="d"></DxDataGridDateEditColumn>
-</DxDataGrid>
+
+<h3>Custom Grid:</h3>
+
+<MyGrid Data="forecasts">
+    <Columns>
+        <DxGridDataColumn FieldName="@nameof(WeatherForecast.TemperatureC)" Caption="@("Temp. (\x2103)")" TextAlignment="GridTextAlignment.Right"></DxGridDataColumn>
+        <DxGridDataColumn FieldName="@nameof(WeatherForecast.Summary)" Caption="Summary"></DxGridDataColumn>
+        <DxGridDataColumn FieldName="@nameof(WeatherForecast.Date)" DisplayFormat="D"></DxGridDataColumn>
+    </Columns>
+</MyGrid>
+
+<h3>Default Grid:</h3>
+
+<DxGrid Data="forecasts">
+    <Columns>
+        <DxGridDataColumn FieldName="@nameof(WeatherForecast.TemperatureC)" Caption="@("Temp. (\x2103)")" TextAlignment="GridTextAlignment.Right"></DxGridDataColumn>
+        <DxGridDataColumn FieldName="@nameof(WeatherForecast.Summary)" Caption="Summary"></DxGridDataColumn>
+        <DxGridDataColumn FieldName="@nameof(WeatherForecast.Date)" DisplayFormat="D"></DxGridDataColumn>
+    </Columns>
+</DxGrid>
+
 @code{
     WeatherForecast[] forecasts;
     protected override async Task OnInitializedAsync() {
