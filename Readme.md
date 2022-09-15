@@ -19,7 +19,7 @@ In this example, the [MyGrid](./CS/DxBlazorComponentsDefaultSettings/Components/
 
 You cannot use this technique for **DxChartXXXSeries** components and specify the **ValueField**, **ArgumentField**, **NameField**, and **PaneField** properties.
 
-## Files to Look At
+## Files to Review
 
 * [Index.razor](./CS/DxBlazorComponentsDefaultSettings/Pages/Index.razor)
 * [MyTextBox.cs](./CS/DxBlazorComponentsDefaultSettings/Components/MyTextBox.cs)
