@@ -6,7 +6,7 @@
 
 # DevExpress Blazor Components - Set predefined settings for a specific component
 
-Controls generally have the same settings across different pages within a large web application. We recommend that you specify these component settings in markup. You can also override the **SetParametersAsyncCore** (for the Grid) or the **SetParametersAsync** (for other components) method to specify default settings for Blazor components used within in your application.
+Controls generally have the same settings across different pages within a large web application. We recommend that you specify these component settings in markup. You can also override the **SetParametersAsyncCore** (for the Grid and Editors) or the **SetParametersAsync** (for other components) method to specify default settings for Blazor components used within in your application.
 
 ![Grid with predefined settings and default](images/result.png)
 
